@@ -3,7 +3,7 @@
 _*_coding: utf-8 _*_
 @Time    : 2019/12/22 17:50
 @Author  : Zhangyunjia
-@FileName: keras基础.py
+@FileName: keras1.py
 @Software: PyCharm
 # @Github: https://github.com/Tang4109
 '''
@@ -51,17 +51,13 @@ val_dataset = val_dataset.repeat()
 model.fit(dataset, epochs=10, steps_per_epoch=30, validation_data=val_dataset, validation_steps=3)
 
 # 评估与测评
-test_x = np.random.random((1000,72))
-test_y = np.random.random((1000,10))
+test_x = np.random.random((1000, 72))
+test_y = np.random.random((1000, 10))
 # model.evaluate(test_x,test_y, batch_size =32)
-test_data = tf.data.Dataset.from_tensor_slices((test_x,test_y))
+test_data = tf.data.Dataset.from_tensor_slices((test_x, test_y))
 test_data = test_data.batch(32).repeat()
-model.evaluate(test_data,steps =30)
-
-result=model.predict(test_x,batch_size =32)
+model.evaluate(test_data, steps=30)
+# 预测
+result = model.predict(test_x, batch_size=32)
 print(result)
-
-
-
-
 
