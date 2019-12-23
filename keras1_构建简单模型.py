@@ -3,7 +3,7 @@
 _*_coding: utf-8 _*_
 @Time    : 2019/12/22 17:50
 @Author  : Zhangyunjia
-@FileName: keras1.py
+@FileName: keras1_构建简单模型.py
 @Software: PyCharm
 # @Github: https://github.com/Tang4109
 '''
